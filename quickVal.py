@@ -40,9 +40,11 @@ class quickVal():
         self.releaseExtent = ''
         self.referenceExtent = ''
         self.web_location = [DataLocation(self)[0][2],
-                           DataLocation(self)[1][2]]
+                           DataLocation(self)[1][2],
+                            DataLocation(self)[2][2]]
         self.web_extension = [DataLocation(self)[0][3],
-                           DataLocation(self)[1][3]]
+                           DataLocation(self)[1][3],
+                            DataLocation(self)[2][3]]
         self.Gev = [] # table for validations
 
         print('config.py file creation')
@@ -64,7 +66,7 @@ class quickVal():
         i_back = 1
         while (i_back != 0):
             table=getattr(sys.modules[__name__], "fonction_%s" % str(i_back))(self)
-            i_back = (table + 1) % 17
+            i_back = (table + 1) % 16
             print('i_back : %d' % i_back)
 
         self.configFile.close()

@@ -15,6 +15,7 @@ def DataLocation(self):
     table=[
     ["Remote eos dev", 1, '/eos/project/c/cmsweb/www/egamma/validation/Electrons/Dev/', 'dev'],
     ["Remote eos std", 0, '/eos/project/c/cmsweb/www/egamma/validation/Electrons/Releases/', 'std'],
+    ["Remote eos tst", 0, '/eos/project/c/cmsweb/www/egamma/validation/Electrons/Test/', 'dev'],
     ]
     return table
 
