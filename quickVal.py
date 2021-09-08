@@ -40,11 +40,9 @@ class quickVal():
         self.releaseExtent = ''
         self.referenceExtent = ''
         self.web_location = [DataLocation(self)[0][2],
-                           DataLocation(self)[1][2],
-                            DataLocation(self)[2][2]]
+                           DataLocation(self)[1][2]]
         self.web_extension = [DataLocation(self)[0][3],
-                           DataLocation(self)[1][3],
-                            DataLocation(self)[2][3]]
+                           DataLocation(self)[1][3]]
         self.Gev = [] # table for validations
 
         print('config.py file creation')
