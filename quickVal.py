@@ -6,10 +6,10 @@ import re
 from time import sleep
 
 #sys.path.append('/afs/cern.ch/user/a/archiron/lbin/ChiLib')
-#sys.path.append('/eos/project-c/cmsweb/www/egamma/validation/Electrons/ChiLib/')
-sys.path.append('/afs/cern.ch/user/a/archiron/public/TESTS/ChiLib_CMS_Validation/')
+sys.path.append('/eos/project-c/cmsweb/www/egamma/validation/Electrons/ChiLib/')
+#sys.path.append('/afs/cern.ch/user/a/archiron/public/TESTS/ChiLib_CMS_Validation/')
 
-from networkFunctionsDev import list_search_0
+from networkFunctions import list_search_0
 from functionsqV import *
 from defaultqV import *
 from datasetsqV import DataLocation
