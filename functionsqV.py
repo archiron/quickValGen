@@ -7,7 +7,7 @@ from time import sleep
 
 sys.path.append('/afs/cern.ch/user/a/archiron/lbin/ChiLib')
 
-from networkFunctions import list_search_1
+from networkFunctionsDev import list_search_1
 from datasetsqV import *
 from displayqV import *
 from optionsqV import *
@@ -16,7 +16,12 @@ def get_answerText(self, text2prompt, nb):
     quitLoop = True
     print('')
     while ( quitLoop ):
-        rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
+        if sys.version_info >= (3, 0):
+            sys.stdout.write("Python 3.x\n")
+            rel = input(text2prompt + '\n >> : ')  # Python 3
+        else:
+            sys.stdout.write("Python 2.x\n")
+            rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
         if rel == 'q':
             exit()
         elif rel == 'b':
@@ -49,8 +54,12 @@ def get_answer1(text2prompt, tab1, tab2):
     quitLoop = True
     print('')
     while ( quitLoop ):
-        rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
-        #rel = input(text2prompt)  # Python 3
+        if sys.version_info >= (3, 0):
+            sys.stdout.write("Python 3.x\n")
+            rel = input(text2prompt + '\n >> : ')  # Python 3
+        else:
+            sys.stdout.write("Python 2.x\n")
+            rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
         if rel == 'q':
             exit()
         elif rel == 'h':
@@ -78,8 +87,12 @@ def get_answer10X(text2prompt, tab):
     quitLoop = True
     print('')
     while ( quitLoop ):
-        vals = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
-        #rel = input(text2prompt)  # Python 3
+        if sys.version_info >= (3, 0):
+            sys.stdout.write("Python 3.x\n")
+            vals = input(text2prompt + '\n >> : ')  # Python 3
+        else:
+            sys.stdout.write("Python 2.x\n")
+            vals = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
         vals2 = vals.split(',')
         print(vals, vals2)
         for i in range(0, len(vals2)):
@@ -101,8 +114,12 @@ def get_answer2(text2prompt):
     quitLoop = True
     print('')
     while ( quitLoop ):
-        rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
-        #rel = input(text2prompt)  # Python 3
+        if sys.version_info >= (3, 0):
+            sys.stdout.write("Python 3.x\n")
+            rel = input(text2prompt + '\n >> : ')  # Python 3
+        else:
+            sys.stdout.write("Python 2.x\n")
+            rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
         if rel == 'q':
             exit()
         elif rel == 'b': # back
@@ -120,8 +137,12 @@ def get_answer3(self, text2prompt, tab, nb):
     quitLoop = True
     print('')
     while ( quitLoop ):
-        rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
-        #rel = input(text2prompt)  # Python 3
+        if sys.version_info >= (3, 0):
+            sys.stdout.write("Python 3.x\n")
+            rel = input(text2prompt + '\n >> : ')  # Python 3
+        else:
+            sys.stdout.write("Python 2.x\n")
+            rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
         if rel == 'q':
             exit()
         elif rel == 'b':
@@ -175,8 +196,12 @@ def get_answer4(self, text2prompt):
     quitLoop = True
     print('')
     while ( quitLoop ):
-        rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
-        #rel = input(text2prompt)  # Python 3
+        if sys.version_info >= (3, 0):
+            sys.stdout.write("Python 3.x\n")
+            rel = input(text2prompt + '\n >> : ')  # Python 3
+        else:
+            sys.stdout.write("Python 2.x\n")
+            rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
 
         #print('rel : %s' % rel)
         if rel == 'q':
@@ -210,8 +235,12 @@ def get_answer5(self, text2prompt, nb):
     quitLoop = True
     print('')
     while ( quitLoop ):
-        rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
-        #rel = input(text2prompt)  # Python 3
+        if sys.version_info >= (3, 0):
+            sys.stdout.write("Python 3.x\n")
+            rel = input(text2prompt + '\n >> : ')  # Python 3
+        else:
+            sys.stdout.write("Python 2.x\n")
+            rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
         temp = ''
 
         if rel == 'q':
@@ -249,8 +278,12 @@ def get_answer6(self, text2prompt, tab, nb): # for GT
     quitLoop = True
     print('')
     while ( quitLoop ):
-        rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
-        #rel = input(text2prompt)  # Python 3
+        if sys.version_info >= (3, 0):
+            sys.stdout.write("Python 3.x\n")
+            rel = input(text2prompt + '\n >> : ')  # Python 3
+        else:
+            sys.stdout.write("Python 2.x\n")
+            rel = raw_input(text2prompt + '\n >> : ') # blanck to see correctly what we answered
         if rel == 'q':
             exit()
         elif rel == 'b':
@@ -295,7 +328,7 @@ def fonction_1(self):
     print('Pictures & web pages can be located on 2 eos folders : Dev or Releases.')
     print_tab_2(self.web_location, self.color_nb)
     text_to_prompt = "number of the folder choice or [" + colorText('q', self.color) +"]uit. ? "
-    text_to_prompt += "                    [" + colorText('h', self.color) + "]elp"
+    text_to_prompt += "                    [" + colorText('h', self.color) + "]elp "
     #text_to_prompt += colorText('s', self.color) + "]tatus "
     self.location, self.extension = get_answer1(text_to_prompt, self.web_location, self.web_extension)
     #self.logFile.seek(0)
@@ -499,7 +532,7 @@ def fonction_7(self):
     without personalization, some validations such as tests for a new gcc version, or a ROOT one
     could be written into the same reference folder.
     In order to avoid that, we add an extension to personalize those paths.
-"""
+    """
     screen_clear()
     #print('vous appelez la fonction 7')
     # web folder name customization
@@ -982,7 +1015,7 @@ def fonction_15(self):
     text_to_prompt = "Adding another set of validation ?, [" + colorText('y', self.color) + "]es/["
     text_to_prompt += colorText('n', self.color) + "o], [" + colorText( 'b', self.color)
     text_to_prompt += "]ack or [" + colorText('q', self.color) + "]uit. ? "
-    text_to_prompt += "                    [" + colorText('h', self.color) + "]elp"
+    text_to_prompt += "                    [" + colorText('h', self.color) + "]elp "
     answer4new = get_answer5(self, text_to_prompt, 15)  #
     print('answer for new set : %s' % answer4new)
     if answer4new == '': # back
@@ -1004,7 +1037,6 @@ def fonction_15(self):
             self.configFile.write('#############################################################################\n')
             self.configFile.write('# global data\n')
             self.configFile.write('web_repo = ' + str([self.location, self.extension]) + '\n')
-            self.configFile.write('KS_reference_release = \'' + str(self.KS_release) + '\'\n')
             self.configFile.write('\n')
             ind = 0
             for elem in self.Gev:
@@ -1021,7 +1053,7 @@ def fonction_15(self):
                 self.configFile.write(']\n')
                 ind += 1
             self.logFile.write('15 - write into config.py file' + '\n')
-	    self.configFile.write('#############################################################################\n')
+            self.configFile.write('#############################################################################\n')
             self.configFile.write('\n')
         else:
             print('no config file open')

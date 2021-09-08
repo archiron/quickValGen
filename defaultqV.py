@@ -3,9 +3,8 @@
 
 #import os,sys
 
-version = '0.62'
-# correcting a bug with function_11/12 sattus redirection.
-# add some control of the existing datasets.
+version = '0.64'
+# modification3 in order to run with python2/3
 # The default datasets are compared to the common ones.
 # - if all defaults are in commons, continue
 # - is some of the default datasets are missing, a WARNING sentence is displayed.
