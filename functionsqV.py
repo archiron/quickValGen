@@ -1037,6 +1037,8 @@ def fonction_15(self):
             self.configFile.write('#############################################################################\n')
             self.configFile.write('# global data\n')
             self.configFile.write('web_repo = ' + str([self.location, self.extension]) + '\n')
+            self.configFile.write('KS_reference_release = \'\'' + '\n')
+            self.configFile.write('Validation_reference = \'\'' + '\n')
             self.configFile.write('\n')
             ind = 0
             for elem in self.Gev:
